@@ -8,7 +8,7 @@ import MainPage from "./pages/MainPage";
 const queryClient = new QueryClient();
 function App() {
   useEffect(() => {
-    document.title = "Portfolio";
+    document.title = "My portfolio";
   });
   return (
     <QueryClientProvider client={queryClient}>

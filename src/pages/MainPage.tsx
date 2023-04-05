@@ -1,10 +1,22 @@
-import { AppBar, Grid, Toolbar, Menu, MenuItem } from "@mui/material";
+import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import ProjectDisplay from "../components/ProjectDisplay";
 
 export default function MainPage() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div>
+      <div className="App">
+        <Box
+          sx={{
+            boxShadow: "0 4px 16px rgba(0, 0, 0, 0.9)",
+            mb: 10,
+          }}
+        >
+          <AppBar position="static" sx={{ padding: 2.5 }}>
+            <Toolbar>
+              <Typography variant="h3">My portfolio</Typography>
+            </Toolbar>
+          </AppBar>
+        </Box>
         <Grid
           container
           direction="column"
@@ -13,31 +25,10 @@ export default function MainPage() {
           sx={{ padding: 0.1 }}
         >
           <Grid item>
-            <AppBar position="static">
-              <Toolbar>
-                <Menu
-                  anchorOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: "top",
-                    horizontal: "right",
-                  }}
-                  open={true}
-                  id="menu-appbar"
-                >
-                  <MenuItem>Portfolio</MenuItem>
-                </Menu>
-              </Toolbar>
-            </AppBar>
-          </Grid>
-          <Grid item>
             <ProjectDisplay />
           </Grid>
         </Grid>
-      </header>
+      </div>
     </div>
   );
 }

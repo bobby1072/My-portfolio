@@ -1,4 +1,5 @@
 export default interface IApplication {
+  image?: string;
   name: string;
   description: string;
   githubUrl?: string;
