@@ -4,17 +4,18 @@ import { ThemeProvider } from "@mui/material";
 import { mainTheme } from "./utils/theme";
 import { useEffect } from "react";
 import { QueryClientProvider, QueryClient } from "react-query";
+import MainPage from "./pages/MainPage";
 const queryClient = new QueryClient();
 function App() {
   useEffect(() => {
-    document.title = "portfolio";
+    document.title = "Portfolio";
   });
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={mainTheme}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={""} />
+            <Route path="/" element={<MainPage />} />
           </Routes>
         </BrowserRouter>
       </ThemeProvider>
