@@ -1,5 +1,7 @@
 export default interface IApplication {
   image?: any;
+  techStack: string[];
+  languages: string[];
   name: string;
   description: string;
   online: boolean;

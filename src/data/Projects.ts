@@ -7,6 +7,8 @@ export default abstract class Projects {
     {
       name: "movie-assistant",
       image: movieAssistantPhoto,
+      techStack: ["React", "electron"],
+      languages: ["Typescript"],
       online: true,
       description:
         "An application used to help you find information about different types of media such as films and series.",
@@ -19,6 +21,8 @@ export default abstract class Projects {
     {
       name: "the-fish-suite",
       image: fishingSuitePhoto,
+      techStack: ["React", "Express", "MongoDB"],
+      languages: ["Typescript", "Javascript"],
       online: true,
       description:
         "This application is a suite application used by fisherman to log catches and later them. It also offers a service called the fish dictionary used to search for fish species",

@@ -1,6 +1,6 @@
 export default abstract class Constants {
   public static ProductionEnv: boolean = process.env.NODE_ENV === "production";
-  public static DownLoadLink: string = this.ProductionEnv
-    ? "https://project-download-api.herokuapp.com"
-    : "http://localhost:5000";
+  public static DownLoadLink: string =
+    "https://project-download-api.herokuapp.com";
+  public static DownloadError: string = "Couldn't download app";
 }
