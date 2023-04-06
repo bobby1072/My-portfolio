@@ -1,9 +1,13 @@
 import { Grid } from "@mui/material";
-import Projects from "../data/Projects";
 import SmallProjectTab from "./SmallProjectTab";
-
-export default function ProjectDisplay() {
-  const projects = Projects.ProjectArray;
+import { useContext } from "react";
+import { AppContext } from "../utils/AppContext";
+import IApplication from "../common/IApplication";
+interface IProjectDisplayProps {
+  setProject: (app?: IApplication) => void;
+}
+export default function ProjectDisplay(props: IProjectDisplayProps) {
+  const projects = useContext(AppContext);
   return (
     <Grid
       container
@@ -14,7 +18,7 @@ export default function ProjectDisplay() {
     >
       {projects.map((x) => (
         <Grid item>
-          <SmallProjectTab project={x} />
+          <SmallProjectTab project={x} setProject={props.setProject} />
         </Grid>
       ))}
     </Grid>

@@ -1,7 +1,12 @@
 import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
 import ProjectDisplay from "../components/ProjectDisplay";
+import { useState } from "react";
+import IApplication from "../common/IApplication";
+import ProjectModal from "../components/ProjectModal";
+import Backdrop from "../components/Backdrop";
 
 export default function MainPage() {
+  const [project, setProject] = useState<IApplication>();
   return (
     <div>
       <div className="App">
@@ -11,7 +16,7 @@ export default function MainPage() {
             mb: 6,
           }}
         >
-          <AppBar position="static" sx={{ padding: 2.5 }}>
+          <AppBar position="static" sx={{ padding: 2.5, alignItems: "center" }}>
             <Toolbar>
               <Typography variant="h3">My portfolio</Typography>
             </Toolbar>
@@ -25,9 +30,22 @@ export default function MainPage() {
           sx={{ padding: 4 }}
         >
           <Grid item>
-            <ProjectDisplay />
+            <ProjectDisplay
+              setProject={(app?: IApplication) => {
+                setProject(app);
+              }}
+            />
           </Grid>
         </Grid>
+        {project && (
+          <div>
+            <ProjectModal
+              app={project}
+              setProjectFalse={() => setProject(undefined)}
+            />
+            <Backdrop setProjectFalse={() => setProject(undefined)} />
+          </div>
+        )}
       </div>
     </div>
   );
