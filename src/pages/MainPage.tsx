@@ -8,7 +8,7 @@ export default function MainPage() {
         <Box
           sx={{
             boxShadow: "0 4px 16px rgba(0, 0, 0, 0.9)",
-            mb: 10,
+            mb: 6,
           }}
         >
           <AppBar position="static" sx={{ padding: 2.5 }}>
@@ -22,7 +22,7 @@ export default function MainPage() {
           direction="column"
           justifyContent="center"
           alignItems="center"
-          sx={{ padding: 0.1 }}
+          sx={{ padding: 4 }}
         >
           <Grid item>
             <ProjectDisplay />

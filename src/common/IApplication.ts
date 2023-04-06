@@ -1,7 +1,8 @@
 export default interface IApplication {
-  image?: string;
+  image?: any;
   name: string;
   description: string;
+  online: boolean;
   githubUrl?: string;
   desktopApp?: IDesktopApp;
   webApp?: IWebApp;
