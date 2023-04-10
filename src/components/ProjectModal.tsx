@@ -1,8 +1,9 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, IconButton } from "@mui/material";
 import IApplication from "../common/IApplication";
 import { useMutation } from "react-query";
 import { useState } from "react";
 import Constants from "../common/Constants";
+import GitHubIcon from "@mui/icons-material/GitHub";
 interface IProjectModalProps {
   app: IApplication;
   setProjectFalse: () => void;
@@ -88,13 +89,43 @@ export default function ProjectModal(props: IProjectModalProps) {
                 </Button>
               </Grid>
             )}
+            {app.githubUrl && (
+              <Grid item>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  onClick={() => {
+                    window.location.href = app.githubUrl!;
+                  }}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#000000",
+                  }}
+                >
+                  <IconButton
+                    size="medium"
+                    sx={{
+                      padding: 0,
+                      "& svg": {
+                        fontSize: "1.5rem",
+                        color: "#ffffff",
+                      },
+                    }}
+                  >
+                    <GitHubIcon />
+                  </IconButton>
+                </Button>
+              </Grid>
+            )}
           </Grid>
         </Grid>
         {isLoading && (
           <div>
             <Grid item>
               <Typography variant="subtitle2" fontSize={19}>
-                Loading...
+                Downloading...
               </Typography>
             </Grid>
             <Grid item>

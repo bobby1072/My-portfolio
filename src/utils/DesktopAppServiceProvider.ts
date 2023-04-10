@@ -1,6 +1,6 @@
 import axios from "axios";
 import Constants from "../common/Constants";
-
+import FileDownload from "js-file-download";
 export default abstract class DesktopAppServiceProvider {
   private static _httpClient = axios.create({
     baseURL: Constants.DownLoadLink,
@@ -11,17 +11,8 @@ export default abstract class DesktopAppServiceProvider {
     const req = this._httpClient
       .get(`${projectLink}/`, { responseType: "arraybuffer" })
       .then((response) => {
-        const blob = new Blob([response.data], {
-          type: "application/octet-stream",
-        });
-        const link = document.createElement("a");
-        link.href = window.URL.createObjectURL(blob);
-        link.download = `${projectLink}.exe`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        FileDownload(response.data, `${projectLink}.exe`);
       });
-    await req;
     return req;
   }
   public static GetMovieAssistant(): Promise<any> {
