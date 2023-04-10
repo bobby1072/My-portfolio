@@ -2,6 +2,7 @@ import IApplication from "../common/IApplication";
 import DesktopAppServiceProvider from "../utils/DesktopAppServiceProvider";
 import fishingSuitePhoto from "./images/fishingsuite.png";
 import movieAssistantPhoto from "./images/movie-assistant.png";
+import pokedexImage from "./images/pokedex.png";
 export default abstract class Projects {
   public static ProjectArray: IApplication[] = [
     {
@@ -30,6 +31,19 @@ export default abstract class Projects {
         link: "https://the-fishing-suite.herokuapp.com/",
       },
       githubUrl: "https://github.com/bobby1072/Fish-Logger-webpage/",
+    },
+    {
+      name: "pokedex",
+      techStack: ["React"],
+      languages: ["Typescript"],
+      online: true,
+      description:
+        "This app is simply my go at making a pokedex with typescript react",
+      webApp: {
+        link: "https://typescript-pokedex.herokuapp.com/",
+      },
+      githubUrl: "https://github.com/bobby1072/PokeDex",
+      image: pokedexImage,
     },
   ];
 }
