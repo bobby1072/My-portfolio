@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
-import SmallProjectTab from "./SmallProjectTab";
+import SmallProjectTab from "../SmallProjectTab/SmallProjectTab";
 import { useContext } from "react";
-import { AppContext } from "../utils/AppContext";
-import IApplication from "../common/IApplication";
+import { AppContext } from "../../utils/AppContext";
+import IApplication from "../../common/IApplication";
 interface IProjectDisplayProps {
   setProject: (app?: IApplication) => void;
 }

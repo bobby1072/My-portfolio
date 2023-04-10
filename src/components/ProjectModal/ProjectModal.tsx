@@ -1,9 +1,10 @@
 import { Box, Button, Grid, Typography, IconButton } from "@mui/material";
-import IApplication from "../common/IApplication";
+import IApplication from "../../common/IApplication";
 import { useMutation } from "react-query";
 import { useState } from "react";
-import Constants from "../common/Constants";
+import Constants from "../../common/Constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import OnlineStatus from "../Common/OnlineStatus";
 interface IProjectModalProps {
   app: IApplication;
   setProjectFalse: () => void;
@@ -11,7 +12,7 @@ interface IProjectModalProps {
 export default function ProjectModal(props: IProjectModalProps) {
   const { app, setProjectFalse } = props;
   const [error, setError] = useState<string>();
-  const { mutate, isLoading } = useMutation(
+  const { mutate: mutateDownloader, isLoading: downloadLoading } = useMutation(
     async () => await app.desktopApp?.downloadRequest(),
     {
       onSuccess: (data) => {
@@ -31,7 +32,7 @@ export default function ProjectModal(props: IProjectModalProps) {
         alignItems="center"
         direction="column"
         spacing={3}
-        sx={{ padding: 1, mb: 1 }}
+        sx={{ padding: 2, mb: 1 }}
       >
         <Grid item>
           <Box
@@ -52,6 +53,9 @@ export default function ProjectModal(props: IProjectModalProps) {
           </Typography>
         </Grid>
         <Grid item>
+          <OnlineStatus online={app.online} />
+        </Grid>
+        <Grid item>
           <Grid
             container
             alignItems="center"
@@ -69,9 +73,9 @@ export default function ProjectModal(props: IProjectModalProps) {
                 <Button
                   variant="contained"
                   onClick={() => {
-                    mutate();
+                    mutateDownloader();
                   }}
-                  disabled={isLoading}
+                  disabled={downloadLoading}
                 >
                   Download
                 </Button>
@@ -121,7 +125,7 @@ export default function ProjectModal(props: IProjectModalProps) {
             )}
           </Grid>
         </Grid>
-        {isLoading && (
+        {downloadLoading && (
           <div>
             <Grid item>
               <Typography variant="subtitle2" fontSize={19}>
@@ -141,7 +145,7 @@ export default function ProjectModal(props: IProjectModalProps) {
               {error}
             </Typography>
           </Grid>
-        )}{" "}
+        )}
       </Grid>
     </div>
   );

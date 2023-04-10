@@ -8,8 +8,11 @@ export default abstract class Projects {
     {
       name: "movie-assistant",
       image: movieAssistantPhoto,
-      techStack: ["React", "electron"],
-      languages: ["Typescript"],
+      techStack: [
+        { name: "React", position: "Frontend" },
+        { name: "Electron", position: "Frontend" },
+      ],
+      languages: [{ name: "Typescript", position: "Frontend" }],
       online: true,
       description:
         "An application used to help you find information about different types of media such as films and series.",
@@ -22,8 +25,15 @@ export default abstract class Projects {
     {
       name: "the-fish-suite",
       image: fishingSuitePhoto,
-      techStack: ["React", "Express", "MongoDB"],
-      languages: ["Typescript", "Javascript"],
+      techStack: [
+        { name: "React", position: "Frontend" },
+        { name: "Express", position: "Backend" },
+        { name: "MongoDB", position: "DB" },
+      ],
+      languages: [
+        { name: "Typescript", position: "Backend" },
+        { name: "Javascript", position: "Frontend" },
+      ],
       online: true,
       description:
         "This application is a suite application used by fisherman to log catches and later them. It also offers a service called the fish dictionary used to search for fish species",
@@ -34,8 +44,8 @@ export default abstract class Projects {
     },
     {
       name: "pokedex",
-      techStack: ["React"],
-      languages: ["Typescript"],
+      techStack: [{ name: "React", position: "Frontend" }],
+      languages: [{ name: "Typescript", position: "Frontend" }],
       online: true,
       description:
         "This app is simply my go at making a pokedex with typescript react",

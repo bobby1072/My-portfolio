@@ -1,7 +1,6 @@
 import { Box, Button, Grid, Paper, Typography } from "@mui/material";
-import IApplication from "../common/IApplication";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CancelIcon from "@mui/icons-material/Cancel";
+import IApplication from "../../common/IApplication";
+import OnlineStatus from "../Common/OnlineStatus";
 interface ISmallProjectTabProps {
   project: IApplication;
   setProject: (app?: IApplication) => void;
@@ -46,41 +45,7 @@ export default function SmallProjectTab(props: ISmallProjectTabProps) {
             </Typography>
           </Grid>
           <Grid item>
-            {project.online ? (
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-                spacing={1}
-              >
-                <Grid item>
-                  <CheckCircleIcon color="success" />
-                </Grid>
-                <Grid item>
-                  <Typography variant="subtitle2" fontSize={20}>
-                    Online
-                  </Typography>
-                </Grid>
-              </Grid>
-            ) : (
-              <Grid
-                container
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-                spacing={1}
-              >
-                <Grid item>
-                  <CancelIcon color="error" />
-                </Grid>
-                <Grid item>
-                  <Typography variant="subtitle2" fontSize={20}>
-                    Offline
-                  </Typography>
-                </Grid>
-              </Grid>
-            )}
+            <OnlineStatus online={project.online} />
           </Grid>
           <Grid item>
             <Button variant="outlined">View</Button>

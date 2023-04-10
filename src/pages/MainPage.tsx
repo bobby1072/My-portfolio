@@ -1,9 +1,9 @@
 import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
-import ProjectDisplay from "../components/ProjectDisplay";
+import ProjectDisplay from "../components/ProjectDisplay/ProjectDisplay";
 import { useState } from "react";
 import IApplication from "../common/IApplication";
-import ProjectModal from "../components/ProjectModal";
-import Backdrop from "../components/Backdrop";
+import ProjectModal from "../components/ProjectModal/ProjectModal";
+import Backdrop from "../components/ProjectModal/Backdrop";
 
 export default function MainPage() {
   const [project, setProject] = useState<IApplication>();
