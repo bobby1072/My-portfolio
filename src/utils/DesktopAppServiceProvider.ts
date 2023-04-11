@@ -6,7 +6,7 @@ export default abstract class DesktopAppServiceProvider {
     baseURL: Constants.DownLoadLink,
   });
   private static async _getRequest(
-    projectLink: "movie-assistant"
+    projectLink: "movie-assistant" | "fish-logger"
   ): Promise<any> {
     const req = this._httpClient
       .get(`${projectLink}/`, { responseType: "arraybuffer" })
@@ -17,5 +17,8 @@ export default abstract class DesktopAppServiceProvider {
   }
   public static GetMovieAssistant(): Promise<any> {
     return DesktopAppServiceProvider._getRequest("movie-assistant");
+  }
+  public static GetFishSuite() {
+    return DesktopAppServiceProvider._getRequest("fish-logger");
   }
 }

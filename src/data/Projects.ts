@@ -23,6 +23,10 @@ export default abstract class Projects {
       githubUrl: "https://github.com/bobby1072/Movie-assistant",
     },
     {
+      desktopApp: {
+        supportedVersions: ["Windows"],
+        downloadRequest: DesktopAppServiceProvider.GetFishSuite,
+      },
       name: "the-fish-suite",
       image: fishingSuitePhoto,
       techStack: [
