@@ -5,6 +5,7 @@ import { useState } from "react";
 import Constants from "../../common/Constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OnlineStatus from "../Common/OnlineStatus";
+import TechAndLangs from "./TechsAndLangs";
 interface IProjectModalProps {
   app: IApplication;
   setProjectFalse: () => void;
@@ -54,6 +55,9 @@ export default function ProjectModal(props: IProjectModalProps) {
         </Grid>
         <Grid item>
           <OnlineStatus online={app.online} />
+        </Grid>
+        <Grid item>
+          <TechAndLangs languages={app.languages} techs={app.techStack} />
         </Grid>
         <Grid item>
           <Grid

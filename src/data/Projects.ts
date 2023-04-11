@@ -6,7 +6,7 @@ import pokedexImage from "./images/pokedex.png";
 export default abstract class Projects {
   public static ProjectArray: IApplication[] = [
     {
-      name: "movie-assistant",
+      name: "Movie-Assistant",
       image: movieAssistantPhoto,
       techStack: [
         { name: "React", position: "Frontend" },
@@ -27,7 +27,7 @@ export default abstract class Projects {
         supportedVersions: ["Windows"],
         downloadRequest: DesktopAppServiceProvider.GetFishSuite,
       },
-      name: "the-fish-suite",
+      name: "The-Fish-Suite",
       image: fishingSuitePhoto,
       techStack: [
         { name: "React", position: "Frontend" },
@@ -47,7 +47,7 @@ export default abstract class Projects {
       githubUrl: "https://github.com/bobby1072/Fish-Logger-webpage/",
     },
     {
-      name: "pokedex",
+      name: "Pokedex",
       techStack: [{ name: "React", position: "Frontend" }],
       languages: [{ name: "Typescript", position: "Frontend" }],
       online: true,

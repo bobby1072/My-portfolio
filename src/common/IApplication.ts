@@ -10,7 +10,7 @@ export default interface IApplication {
   webApp?: IWebApp;
 }
 
-interface ITechLang {
+export interface ITechLang {
   name: string;
   position: "Frontend" | "Backend" | "DB";
 }
