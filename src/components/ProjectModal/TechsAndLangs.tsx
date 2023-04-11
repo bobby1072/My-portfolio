@@ -22,7 +22,7 @@ export default function TechAndLangs(props: ITechAndLangProps) {
     techs.find((x) => x.position === "DB")
   )
     place.push("DB");
-  return (
+  return place.length > 0 ? (
     <Grid
       container
       justifyContent="center"
@@ -41,7 +41,7 @@ export default function TechAndLangs(props: ITechAndLangProps) {
           .join(", ");
         return (
           <Grid item>
-            <Paper sx={{ minHeight: "14vh" }}>
+            <Paper sx={{ minHeight: "14vh", backgroundColor: "#e4e4e4" }}>
               <Grid
                 container
                 justifyContent="center"
@@ -75,5 +75,5 @@ export default function TechAndLangs(props: ITechAndLangProps) {
         );
       })}
     </Grid>
-  );
+  ) : null;
 }

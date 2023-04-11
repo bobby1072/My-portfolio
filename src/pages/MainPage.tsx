@@ -3,7 +3,6 @@ import ProjectDisplay from "../components/ProjectDisplay/ProjectDisplay";
 import { useState } from "react";
 import IApplication from "../common/IApplication";
 import ProjectModal from "../components/ProjectModal/ProjectModal";
-import Backdrop from "../components/ProjectModal/Backdrop";
 
 export default function MainPage() {
   const [project, setProject] = useState<IApplication>();
@@ -43,7 +42,6 @@ export default function MainPage() {
               app={project}
               setProjectFalse={() => setProject(undefined)}
             />
-            <Backdrop setProjectFalse={() => setProject(undefined)} />
           </div>
         )}
       </div>

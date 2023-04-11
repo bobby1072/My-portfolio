@@ -35,7 +35,7 @@ export default function SmallProjectTab(props: ISmallProjectTabProps) {
                 component="img"
                 alt={project.name}
                 src={project.image}
-                sx={{ maxWidth: "50vh", maxHeight: "32vh" }}
+                sx={{ width: "90%", maxHeight: "32vh" }}
               />
             </Grid>
           )}
