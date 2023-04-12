@@ -20,6 +20,5 @@ export interface IWebApp {
 }
 
 export interface IDesktopApp {
-  downloadRequest: () => any;
   supportedVersions: ["Windows"] | ["Windows", "Mac"];
 }

@@ -1,5 +1,4 @@
 import IApplication from "../common/IApplication";
-import DesktopAppServiceProvider from "../utils/DesktopAppServiceProvider";
 import fishingSuitePhoto from "./images/fishingsuite.png";
 import movieAssistantPhoto from "./images/movie-assistant.png";
 import pokedexImage from "./images/pokedex.png";
@@ -18,14 +17,12 @@ export default abstract class Projects {
         "An application used to help you find information about different types of media such as films and series.",
       desktopApp: {
         supportedVersions: ["Windows"],
-        downloadRequest: DesktopAppServiceProvider.GetMovieAssistant,
       },
       githubUrl: "https://github.com/bobby1072/Movie-assistant",
     },
     {
       desktopApp: {
         supportedVersions: ["Windows"],
-        downloadRequest: DesktopAppServiceProvider.GetFishSuite,
       },
       name: "The-Fish-Suite",
       image: fishingSuitePhoto,

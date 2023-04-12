@@ -1,8 +1,6 @@
 import { Box, Button, Grid, Typography, IconButton } from "@mui/material";
 import Modal from "@mui/material/Modal";
 import IApplication from "../../common/IApplication";
-import { useMutation } from "react-query";
-import { useState } from "react";
 import Constants from "../../common/Constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OnlineStatus from "../Common/OnlineStatus";
@@ -17,30 +15,17 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   maxWidth: "80%",
-  height: "80%",
+  maxHeight: "80%",
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-  padding: 1,
+  padding: 2,
   overflowY: "auto",
 };
 
 export default function ProjectModal(props: IProjectModalProps) {
   const { app, setProjectFalse } = props;
-  const [error, setError] = useState<string>();
-  const { mutate: mutateDownloader, isLoading: downloadLoading } = useMutation(
-    async () => await app.desktopApp?.downloadRequest(),
-    {
-      onSuccess: (data) => {
-        setError(undefined);
-      },
-      onError: (error) => {
-        if (error instanceof Error) setError(error.message);
-        else setError(Constants.DownloadError);
-      },
-    }
-  );
   return (
     <Modal
       open
@@ -99,10 +84,8 @@ export default function ProjectModal(props: IProjectModalProps) {
                 <Grid item>
                   <Button
                     variant="contained"
-                    onClick={() => {
-                      mutateDownloader();
-                    }}
-                    disabled={downloadLoading}
+                    href={`${Constants.DownLoadLink}/${app.name.toLowerCase()}`}
+                    download
                   >
                     Download
                   </Button>
@@ -152,27 +135,6 @@ export default function ProjectModal(props: IProjectModalProps) {
               )}
             </Grid>
           </Grid>
-          {downloadLoading && (
-            <div>
-              <Grid item>
-                <Typography variant="subtitle2" fontSize={19}>
-                  Downloading...
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography variant="subtitle2" fontSize={14}>
-                  *May take a while*
-                </Typography>
-              </Grid>
-            </div>
-          )}
-          {error && (
-            <Grid item>
-              <Typography variant="subtitle2" fontSize={19} color="error">
-                {error}
-              </Typography>
-            </Grid>
-          )}
         </Grid>
       </Box>
     </Modal>
