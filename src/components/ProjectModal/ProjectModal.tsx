@@ -61,6 +61,14 @@ export default function ProjectModal(props: IProjectModalProps) {
               {app.description}
             </Typography>
           </Grid>
+          {app.desktopApp && (
+            <Grid item>
+              <Typography variant="subtitle2" fontSize={15}>
+                Supported platforms for download:{" "}
+                {app.desktopApp.supportedVersions.join(", ")}
+              </Typography>
+            </Grid>
+          )}
           <Grid item>
             <OnlineStatus online={app.online} />
           </Grid>

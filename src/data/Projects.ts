@@ -2,8 +2,21 @@ import IApplication from "../common/IApplication";
 import fishingSuitePhoto from "./images/fishingsuite.png";
 import movieAssistantPhoto from "./images/movie-assistant.png";
 import pokedexImage from "./images/pokedex.png";
+import systemDash from "./images/systemdashboard.png";
 export default abstract class Projects {
   public static ProjectArray: IApplication[] = [
+    {
+      name: "system-dashboard",
+      image: systemDash,
+      techStack: [{ name: "React", position: "Frontend" }],
+      description: "An app to view details about your system",
+      languages: [{ name: "Typescript", position: "Frontend" }],
+      online: true,
+      githubUrl: "https://github.com/bobby1072/System-dashboard",
+      desktopApp: {
+        supportedVersions: ["Windows"],
+      },
+    },
     {
       name: "Movie-Assistant",
       image: movieAssistantPhoto,
@@ -44,6 +57,9 @@ export default abstract class Projects {
       githubUrl: "https://github.com/bobby1072/Fish-Logger-webpage/",
     },
     {
+      desktopApp: {
+        supportedVersions: ["Windows"],
+      },
       name: "Pokedex",
       techStack: [{ name: "React", position: "Frontend" }],
       languages: [{ name: "Typescript", position: "Frontend" }],
