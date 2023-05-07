@@ -3,13 +3,26 @@ import fishingSuitePhoto from "./images/fishingsuite.png";
 import movieAssistantPhoto from "./images/movie-assistant.png";
 import pokedexImage from "./images/pokedex.png";
 import systemDash from "./images/systemdashboard.png";
+import policeTracker from "./images/policeTracker.png";
 export default abstract class Projects {
   public static ProjectArray: IApplication[] = [
+    {
+      name: "Police Tracker",
+      description:
+        "This web app is used search for different information about police services in the uk.",
+      languages: [{ name: "Typescript", position: "Frontend" }],
+      online: true,
+      techStack: [{ name: "React", position: "Frontend" }],
+      image: policeTracker,
+      githubUrl: "https://github.com/bobby1072/Police-tracker",
+      webApp: { link: "https://police-tracker.herokuapp.com/force" },
+    },
     {
       name: "system-dashboard",
       image: systemDash,
       techStack: [{ name: "React", position: "Frontend" }],
-      description: "An app to view details about your system",
+      description:
+        "An app to view details about your system. This app can show information about the cpu, hardware, os, battery, network, screen, gpus and RAM.",
       languages: [{ name: "Typescript", position: "Frontend" }],
       online: true,
       githubUrl: "https://github.com/bobby1072/System-dashboard",
@@ -50,7 +63,7 @@ export default abstract class Projects {
       ],
       online: true,
       description:
-        "This application is a suite application used by fisherman to log catches and later them. It also offers a service called the fish dictionary used to search for fish species",
+        "This application is a suite application used by fisherman to log catches and later them. It also offers a service called the fish dictionary used to search for fish species.",
       webApp: {
         link: "https://the-fishing-suite.herokuapp.com/",
       },
@@ -65,7 +78,7 @@ export default abstract class Projects {
       languages: [{ name: "Typescript", position: "Frontend" }],
       online: true,
       description:
-        "This app is simply my go at making a pokedex with typescript react",
+        "This app is simply my go at making a pokedex with typescript react.",
       webApp: {
         link: "https://typescript-pokedex.herokuapp.com/",
       },
