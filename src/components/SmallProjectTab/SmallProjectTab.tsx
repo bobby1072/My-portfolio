@@ -1,6 +1,7 @@
-import { Box, Button, Grid, Paper, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import IApplication from "../../common/IApplication";
 import OnlineStatus from "../Common/OnlineStatus";
+import StyledPaper from "../../common/StyledPaper";
 interface ISmallProjectTabProps {
   project: IApplication;
   setProject: (app?: IApplication) => void;
@@ -13,10 +14,8 @@ export default function SmallProjectTab(props: ISmallProjectTabProps) {
         setProject(project);
       }}
     >
-      <Paper
+      <StyledPaper
         sx={{
-          backgroundColor: "#F4F4F4",
-          boxShadow: "0 2px 6px rgba(0, 0, 0, 0.3)",
           cursor: "pointer",
           padding: 2,
         }}
@@ -51,7 +50,7 @@ export default function SmallProjectTab(props: ISmallProjectTabProps) {
             <Button variant="outlined">View</Button>
           </Grid>
         </Grid>
-      </Paper>
+      </StyledPaper>
     </div>
   );
 }
