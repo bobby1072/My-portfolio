@@ -39,21 +39,18 @@ export default function MainPage() {
             }}
           >
             <ReactMarkdown>
-              ##### Hello! I'm Bobby Thompson, a dedicated young software
-              developer with expertise in React TypeScript and backend Node.js.
-              I possess comprehensive skills in both front and backend web
-              development. My primary focus centers around developing resilient
-              backend solutions using ASP .NET, with a particular emphasis on
-              healthcare technology. I am passionate about creating seamless
-              user experiences through React TypeScript and firmly believe in
-              the pivotal role a robust backend plays in ensuring the success of
-              applications. My approach to development is holistic,
-              incorporating hands-on experience in DevOps practices such as
-              containers and pipelines.
+              #### Hello! I'm Bobby Thompson, a dedicated software developer
+              looking for his next career move with expertise in React
+              TypeScript, backend Node.js and .NET. I bring extensive experience
+              in working within Agile methodologies, adeptly navigating through
+              various ceremonies such as Sprint Planning, Daily Stand-ups,
+              Sprint Reviews, and Retrospectives. I'm skilled at working with
+              diverse Scrum teams to deliver great results in fast-paced
+              environments.
             </ReactMarkdown>
             <Divider />
             <ReactMarkdown>
-              ##### All my webapp projects are hosted on Heroku. However some
+              ###### All my webapp projects are hosted on Heroku. However some
               apps do have desktop versions (currently there are only windows
               versions).
             </ReactMarkdown>
