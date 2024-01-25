@@ -15,9 +15,9 @@ export default function MainPage() {
           mb: 3,
         }}
       >
-        <AppBar position="static" sx={{ padding: 2.5, alignItems: "center" }}>
+        <AppBar position="static" sx={{ padding: 4, alignItems: "center" }}>
           <Toolbar>
-            <Typography variant="h1" fontSize={90}>
+            <Typography variant="h1" fontSize={55}>
               My portfolio
             </Typography>
           </Toolbar>
@@ -39,17 +39,17 @@ export default function MainPage() {
             }}
           >
             <ReactMarkdown>
-              ##### Hello! I'm Bobby Thompson, a dedicated software developer
-              specializing in React TypeScript and backend Node.js. With a
-              background in .NET/ASP.NET, I'm well-versed in both front and
-              backend web development. My true passion lies in creating robust
-              backend solutions using TypeScript and Node.js, particularly in
-              the realm of healthcare technology. I thrive on crafting seamless
-              user experiences using React TypeScript and believe in the power
-              of a strong backend to drive application success. I bring a
-              holistic perspective to development, with experience in DevOps
-              practices like containers and pipelines. Let's collaborate and
-              shape the future of healthcare technology together.
+              ##### Hello! I'm Bobby Thompson, a dedicated young software
+              developer with expertise in React TypeScript and backend Node.js.
+              I possess comprehensive skills in both front and backend web
+              development. My primary focus centers around developing resilient
+              backend solutions using ASP .NET, with a particular emphasis on
+              healthcare technology. I am passionate about creating seamless
+              user experiences through React TypeScript and firmly believe in
+              the pivotal role a robust backend plays in ensuring the success of
+              applications. My approach to development is holistic,
+              incorporating hands-on experience in DevOps practices such as
+              containers and pipelines.
             </ReactMarkdown>
             <Divider />
             <ReactMarkdown>
