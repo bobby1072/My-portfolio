@@ -47,10 +47,7 @@ export default abstract class Projects {
       githubUrl: "https://github.com/bobby1072/Movie-assistant",
     },
     {
-      desktopApp: {
-        supportedVersions: ["Windows"],
-      },
-      name: "The-Fish-Suite",
+      name: "The-Fish-Suite (legacy)",
       image: fishingSuitePhoto,
       techStack: [
         { name: "React", position: "Frontend" },
