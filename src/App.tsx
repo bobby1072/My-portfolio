@@ -6,14 +6,9 @@ import { useEffect } from "react";
 import MainPage from "./pages/MainPage";
 import { AppContext } from "./utils/AppContext";
 import Projects from "./data/Projects";
-import ReactGA from "react-ga4";
-const trackingId = "G-ZTQ3DF6BHJ";
 function App() {
   useEffect(() => {
     document.title = "My portfolio";
-  }, []);
-  useEffect(() => {
-    ReactGA.initialize(trackingId);
   }, []);
   return (
     <ThemeProvider theme={mainTheme}>
