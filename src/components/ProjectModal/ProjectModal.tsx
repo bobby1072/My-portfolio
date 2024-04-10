@@ -5,6 +5,8 @@ import Constants from "../../common/Constants";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import OnlineStatus from "../Common/OnlineStatus";
 import TechAndLangs from "./TechsAndLangs";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 interface IProjectModalProps {
   app: IApplication;
   setProjectFalse: () => void;
@@ -26,6 +28,13 @@ const style = {
 
 export default function ProjectModal(props: IProjectModalProps) {
   const { app, setProjectFalse } = props;
+  useEffect(() => {
+    ReactGA.event({
+      category: "project reporting",
+      action: "Click",
+      label: `${app.name} clicked`,
+    });
+  }, [app.name]);
   return (
     <Modal
       open
