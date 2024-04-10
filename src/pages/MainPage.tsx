@@ -41,12 +41,10 @@ export default function MainPage() {
             <ReactMarkdown>
               #### Hello! I'm Bobby Thompson, a dedicated software developer
               looking for his next career move with expertise in React
-              TypeScript, backend Node.js and .NET. I bring extensive experience
-              in working within Agile methodologies, adeptly navigating through
-              various ceremonies such as Sprint Planning, Daily Stand-ups,
-              Sprint Reviews, and Retrospectives. I'm skilled at working with
-              diverse Scrum teams to deliver great results in fast-paced
-              environments.
+              TypeScript, backend Node.js and .NET. I've got experience working
+              within Agile methodologies, adeptly navigating through various
+              ceremonies such as Sprint Planning, Daily Stand-ups, Sprint
+              Reviews, and Retrospectives.
             </ReactMarkdown>
             <Divider />
             <ReactMarkdown>
