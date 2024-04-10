@@ -6,6 +6,7 @@ export default interface IApplication {
   description: string;
   online: boolean;
   githubUrl?: string;
+  githubPrivate?: boolean;
   desktopApp?: IDesktopApp;
   webApp?: IWebApp;
 }

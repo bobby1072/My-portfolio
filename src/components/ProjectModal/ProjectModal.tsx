@@ -101,12 +101,7 @@ export default function ProjectModal(props: IProjectModalProps) {
               )}
               {app.webApp && (
                 <Grid item>
-                  <Button
-                    variant="contained"
-                    onClick={() => {
-                      window.location.href = app.webApp!.link;
-                    }}
-                  >
+                  <Button variant="contained" href={app.webApp!.link}>
                     Go to
                   </Button>
                 </Grid>
@@ -116,9 +111,7 @@ export default function ProjectModal(props: IProjectModalProps) {
                   <Button
                     color="secondary"
                     variant="contained"
-                    onClick={() => {
-                      window.location.href = app.githubUrl!;
-                    }}
+                    href={app.githubUrl!}
                     sx={{
                       display: "flex",
                       alignItems: "center",

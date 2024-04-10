@@ -1,5 +1,5 @@
 import IApplication from "../common/IApplication";
-import fishingSuitePhoto from "./images/fishingsuite.png";
+// import fishingSuitePhoto from "./images/fishingsuite.png";
 import movieAssistantPhoto from "./images/movie-assistant.png";
 import pokedexImage from "./images/pokedex.png";
 import systemDash from "./images/systemdashboard.png";
@@ -46,26 +46,26 @@ export default abstract class Projects {
       },
       githubUrl: "https://github.com/bobby1072/Movie-assistant",
     },
-    {
-      name: "The-Fish-Suite (legacy)",
-      image: fishingSuitePhoto,
-      techStack: [
-        { name: "React", position: "Frontend" },
-        { name: "Express", position: "Backend" },
-        { name: "MongoDB", position: "DB" },
-      ],
-      languages: [
-        { name: "Typescript", position: "Backend" },
-        { name: "Javascript", position: "Frontend" },
-      ],
-      online: true,
-      description:
-        "This application is a suite application used by fisherman to log catches and later them. It also offers a service called the fish dictionary used to search for fish species.",
-      webApp: {
-        link: "https://the-fishing-suite.herokuapp.com/",
-      },
-      githubUrl: "https://github.com/bobby1072/Fish-Logger-webpage/",
-    },
+    // {
+    //   name: "The-Fish-Suite (legacy)",
+    //   image: fishingSuitePhoto,
+    //   techStack: [
+    //     { name: "React", position: "Frontend" },
+    //     { name: "Express", position: "Backend" },
+    //     { name: "MongoDB", position: "DB" },
+    //   ],
+    //   languages: [
+    //     { name: "Typescript", position: "Backend" },
+    //     { name: "Javascript", position: "Frontend" },
+    //   ],
+    //   online: true,
+    //   description:
+    //     "This application is a suite application used by fisherman to log catches and later them. It also offers a service called the fish dictionary used to search for fish species.",
+    //   webApp: {
+    //     link: "https://the-fishing-suite.herokuapp.com/",
+    //   },
+    //   githubUrl: "https://github.com/bobby1072/Fish-Logger-webpage/",
+    // },
     {
       desktopApp: {
         supportedVersions: ["Windows"],
