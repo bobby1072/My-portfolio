@@ -1,11 +1,15 @@
 import { AppBar, Box, Divider, Grid, Toolbar, Typography } from "@mui/material";
 import ProjectDisplay from "../components/ProjectDisplay/ProjectDisplay";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import IApplication from "../common/IApplication";
 import ProjectModal from "../components/ProjectModal/ProjectModal";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import StyledPaper from "../common/StyledPaper";
+import ReactGA from "react-ga4";
 export default function MainPage() {
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Landing page" });
+  }, []);
   const [project, setProject] = useState<IApplication>();
   return (
     <div className="App">
